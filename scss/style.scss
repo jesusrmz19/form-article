@@ -1,0 +1,94 @@
+@import "_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1, p{
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 15px;
+    margin: 1.4em 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    @include respond(small) {
+        height: auto;
+        flex-direction: column;
+    }
+    &--left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include respond(small) {
+            padding: 3em 0;
+        }
+    }
+    &--right {
+        /*background: url("https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=641&q=80");*/
+        background: url("https://images.unsplash.com/photo-1485115905815-74a5c9fda2f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=661&q=80");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        @include respond(medium){
+            width: 50%;
+        }
+        @include respond(small){
+            width: 100%;
+        }
+    }
+}
+
+.container--form {
+    width: 70%;
+    margin: 0 auto;
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input, textarea {
+            width: 100%;
+            border-radius: 5px;
+            max-width: 450px;
+            font-size: 16px;
+            border: none;
+            font-family: 'Roboto Slab', serif;
+            border: 2px solid rgba(0,0,0,0.6);
+            padding: 0.8em 1.2em;
+            transition: border 0.2s ease;
+            margin: 0.8em 0;
+        }
+        button {
+            margin-top: 1.2em;
+            padding: 0.6em 1.2em;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            background: #75c3ea;
+            font-size: 18px;
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            border: none;
+            box-shadow: none;
+            transition: all ease 0.8s;
+            &:hover {
+                background-color: #379ed2;
+                cursor: pointer;
+            }
+        }
+    }
+}
