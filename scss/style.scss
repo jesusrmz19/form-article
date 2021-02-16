@@ -91,6 +91,26 @@ p {
             }
         }
     }
+    .container--success {
+        opacity: 0;
+        display: none;
+        margin: 1.5em 0;
+        border: solid 1px #7acc7a;
+        padding: 1em;
+        border-radius: 5px;
+        width: 300px;
+        background-color: #7acc7a;
+        p {
+            margin: 0;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
+
+.container--success.success {
+    display: block;
+    opacity: 1;
 }
 
 .success {

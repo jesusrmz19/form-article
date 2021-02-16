@@ -21,9 +21,20 @@
                 <textarea type="text" name="message" placeholder="message"></textarea>
                 <button id="sign-in-btn" type="submit">Submit</button>
             </form>
+            <div class="container--success">
+              <p>Your message was sent succesfully!</p>
+            </div>
           </div>
         </div>
         <div class="container--right"></div>
     </main>
+    <script type="text/javascript">
+      let url = window.location.href;
+      if (url.search('success') > 0) {
+        document.querySelector('.container--success').classList.add('success');
+      } else {
+        document.querySelector('.container--success').classList.remove('success');
+      }
+    </script>
 </body>
 </html>
